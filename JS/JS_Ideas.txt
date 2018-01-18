@@ -1,0 +1,59 @@
+$(document).ready(() => {
+	
+
+var a;
+var b;
+var c = ['.Home','.History','.People','.More','.Mom'];
+function sectionOpener(var d);
+
+$('.btn').on('click', (event) => {
+		if ($('.head').is(':visible')){ //checking if the background img is already hidden or not
+			$('.head').fadeOut('1000');
+			$('.nav').addClass('navAnimation');
+		}
+		switch(true){
+			case $('.btn').hasClass('btnHome'):
+				b = c[0];
+				sectionOpener(b);
+			break;
+			case $('.btn').hasClass('btnHistory'):
+				b = c[1];
+				sectionOpener(b);
+			break;
+			case $('.btn').hasClass('btnPeople'):
+				b = c[2];
+				sectionOpener(b);
+			break;
+			case $('.btn').hasClass('btnMore'):
+				b = c[3];
+				sectionOpener(b);
+			break;
+			case $('.btn').hasClass('btnMom'):
+				b = c[4];
+				sectionOpener(b);
+			break;
+			default:
+				b = c[0];
+				sectionOpener(b);
+		}
+	});
+	
+	
+	function sectionOpener(var d) {
+		if ($('.head').is(':visible')){ //Checking if the nav is already in the upper area of the page by analysing if the head is visible or not
+			$('d').delay('3000').slideDown('slow');
+		
+		}
+		else{
+			$('d').siblings().hide(); // The .sibling is used to erase any section that is open
+			$('d').slideDown('slow');
+
+			
+		}
+		
+	};
+});
+	
+	
+	
+	
